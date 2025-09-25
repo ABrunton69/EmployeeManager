@@ -4,11 +4,29 @@
     {
         static void Main(string[] args)
         {
-           
-            Console.Write("Enter a name: ");
-            string inputEmployeeName = Console.ReadLine();
-            Console.Write("Enter an employee ID: ");
-            string inputEmployeeID = Console.ReadLine();
+
+            // Check the validation of the employee name 
+            Boolean validName = false;
+            string inputEmployeeName = "";
+            string inputEmployeeID = "";
+            do
+            {
+                Console.Write("Enter a name: ");
+                inputEmployeeName = Console.ReadLine();
+
+                // Check if the name is valid using the 
+                // IsValidName method from the employee class
+                if (Employee.IsValidName(inputEmployeeName))
+                {
+                    // If the name is valid set the validName variable to true
+                    validName = true;
+                    Console.Write("Enter an employee ID: ");
+                    inputEmployeeID = Console.ReadLine();
+                }
+                
+            } while (validName == false);
+
+            
 
             // Create the employee object
             Employee MyEmployee = new Employee()
