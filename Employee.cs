@@ -68,7 +68,10 @@ namespace EmployeeManager
         // that is readable by the user
         public override string ToString()
         {
-            return $"Employee Name: {employeeName}\nEmployee ID: {employeeId}\nHours Worked: {hoursWorked}\n\nThe weekly wage is: {weeklyWage}";
+            return $"\n\nEmployee Name: {employeeName}" +
+                $"\nEmployee ID: {employeeId}" +
+                $"\nHours Worked: {hoursWorked}" +
+                $"\n\nThe weekly wage is: {weeklyWage}\n\n";
         }
     }
 }
